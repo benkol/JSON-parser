@@ -1,0 +1,55 @@
+.json-parser {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: inset 3px 3px 7px rgba(0,0,0,0.1);
+}
+
+.json-parser ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.json-parser .key::after {
+    content: ": ";
+}
+
+.json-parser .variable.string::before,
+.json-parser .variable.string::after {
+    content: "\"";
+}
+
+.json-parser             .key { color: darkorchid; }
+.json-parser    .json-preview { color: rgb(175, 175, 175) }
+.json-parser .variable.string { color: brown; }
+.json-parser .variable.number { color: darkblue; }
+
+.json-parser .list-node>.key {
+    cursor: pointer;
+    position: relative;
+}
+
+.json-parser .list-node>.json-preview {
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.json-parser .list-node.closed>.json-preview {
+    opacity: 1;
+}
+
+.json-parser .list-node>.key:hover {
+    color: rgb(234, 0, 255);
+}
+
+.json-parser .list-node>.key::before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f107";
+    position: absolute;
+    left: -15px;
+}
+.json-parser .list-node.closed>.key::before {
+    content: "\f105";
+}

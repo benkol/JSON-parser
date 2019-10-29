@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>Tectonic's home exercise</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/styles.css?v=1.0">
+        <link rel="stylesheet" href="css/json-parser.css?v=1.0">
+
+        <script src="https://kit.fontawesome.com/7bd18d67b0.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <form class="url-form form-row align-items-center">
+                <div class="col-auto my-1">
+                    Enter JSON URL:
+                </div>
+                <div class="col-sm-4 my-1">
+                    <label class="sr-only" for="url-input">JSON URL</label>
+                    <input type="text" class="form-control" id="url-input" placeholder="http://">
+                </div>
+
+                <div class="col-auto my-1">
+                    <button type="submit" class="btn btn-primary">Fetch</button>
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col">
+                    <div class="json-parser">Waiting for JSON URL...</div>
+                </div>
+            </div>
+        </div><!-- /.container -->
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/json-parser.js"></script>
+    </body>
+</html>
